@@ -12,25 +12,25 @@ export const HeaderFigures = props => {
 		<div className="grid__container">
 			<div className="grid__item">
 				<span className="grid__item--header">
-					{parseInt(props.amountToBorrow).toLocaleString('en-GB', localeOptions)}
+					{parseInt(props.amountToBorrow).toLocaleString('en-JM', localeOptions)}
 				</span>
 				<div className="grid__item--label">Amount To Borrow</div>
 			</div>
 			<div className="grid__item">
 				<span className="grid__item--header">
-					{parseInt(props.monthlyPayment).toLocaleString('en-GB', localeOptions)}
+					{parseInt(props.monthlyPayment).toLocaleString('en-JM', localeOptions)}
 				</span>
 				<div className="grid__item--label">Monthly Payment</div>
 			</div>
 			<div className="grid__item">
 				<span className="grid__item--header">
-					{parseInt(props.totalRepaid).toLocaleString('en-GB', localeOptions)}
+					{parseInt(props.totalRepaid).toLocaleString('en-JM', localeOptions)}
 				</span>
 				<div className="grid__item--label">Total Repaid</div>
 			</div>
 			<div className="grid__item">
 				<span className="grid__item--header">
-					{parseInt(props.totalInterestPaid).toLocaleString('en-GB', localeOptions)}
+					{parseInt(props.totalInterestPaid).toLocaleString('en-JM', localeOptions)}
 				</span>
 				<div className="grid__item--label">Total Interest Paid</div>
 			</div>

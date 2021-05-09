@@ -76,7 +76,7 @@ const graphOption = {
            			if (value === 0) {
            				return value;
            			}
-           			return '£' + (value / 1000) + 'K';
+           			return '$' + (value / 1000) + 'K';
              		
            		}
          	}
@@ -88,7 +88,7 @@ const graphOption = {
     tooltips: {
     	callbacks: {
         	label: function(tooltipItems, data, index) {
-            	return parseFloat(tooltipItems.value).toLocaleString('en-GB', {style:'currency', currency:'GBP'}) + ' ' + data.datasets[tooltipItems.datasetIndex].label;
+            	return parseFloat(tooltipItems.value).toLocaleString('en-JM', {style:'currency', currency:'JMD'}) + ' ' + data.datasets[tooltipItems.datasetIndex].label;
         	}
     	}
     }
