@@ -5,11 +5,13 @@ import {PaymentGraph} from './PaymentGraph';
 import {PaymentTable} from './PaymentTable';
 import { handleMortgageDataChange } from './utils';
 
+
 export const Calculator = () => {
-	const [depositAmount, setDepositAmount] = useState(72000);
-	const [purchasingHousePrice, setPurchasingHousePrice] = useState(285000);
-	const [mortgageTerm, setMortgageTerm] = useState(25);
-	const [interestRate, setInterestRate] = useState(1.8);
+	
+	const [purchasingHousePrice, setPurchasingHousePrice] = useState(15000000);
+	const [depositAmount, setDepositAmount] = useState(purchasingHousePrice * 0.1);
+	const [mortgageTerm, setMortgageTerm] = useState(35);
+	const [interestRate, setInterestRate] = useState(7.5);
 
 	//Set initial values for the whole mortgage term
 	const amountToBorrow = purchasingHousePrice - depositAmount;
@@ -24,8 +26,6 @@ export const Calculator = () => {
 			<HeaderFigures 
 				amountToBorrow={amountToBorrow}
 				monthlyPayment={monthlyPayment}
-				totalRepaid={totalRepaid}
-				totalInterestPaid={totalInterestPaid}
 				depositAmount={depositAmount}
 				purchasingHousePrice={purchasingHousePrice}
 			/>
@@ -39,6 +39,7 @@ export const Calculator = () => {
 				interestRate={interestRate}
 				setInterestRate={setInterestRate}
 			/>
+
 			<PaymentGraph
 				mortgageTerm={mortgageTerm}
 				yearlyPayments={yearlyPayments}

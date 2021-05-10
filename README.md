@@ -4,25 +4,13 @@
 
 <p>Live demo here: <a href="https://mortgage-payment-calculator.netlify.app/">https://mortgage-payment-calculator.netlify.app</a></p>
 
-<p>I'm in the middle of buying and selling a home and wanted an interactive tool to show me the finances over the term of the mortgage.</p>
-
-<h2>Things I've learned</h2>
-
-- Functional components
-- React hooks with functional components
-  - useState()
-  - useEffect()
-- How much money the banks make
-- The power of compound interest
-
 > *"Compound interest is the eighth wonder of the world. He who understands it, earns it ... he who doesn't ... pays it."* - Albert Einstein
-
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` then `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
