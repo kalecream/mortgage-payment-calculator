@@ -4,6 +4,7 @@ import {CalculatorControls} from './CalculatorControls';
 import {PaymentGraph} from './PaymentGraph';
 import {PaymentTable} from './PaymentTable';
 import { handleMortgageDataChange } from './utils';
+import { Tabs } from './Tabs';
 
 
 export const Calculator = () => {
@@ -39,15 +40,7 @@ export const Calculator = () => {
 				interestRate={interestRate}
 				setInterestRate={setInterestRate}
 			/>
-
-			<PaymentGraph
-				mortgageTerm={mortgageTerm}
-				yearlyPayments={yearlyPayments}
-			/>
-			<PaymentTable
-				amountToBorrow={amountToBorrow}
-				yearlyPayments={yearlyPayments}
-			/>
+			
 		</>
 	);
 
