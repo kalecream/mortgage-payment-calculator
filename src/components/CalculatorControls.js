@@ -13,12 +13,12 @@ export const CalculatorControls = props => {
 			<div className="grid__item">
 				<span className="grid__item--header">{parseInt(props.purchasingHousePrice).toLocaleString('en-JM', localeOptions)}</span>
 				<input 
-					type="range"
-					className="grid__item--range-slider"
+					name="HousePrice"
+					type="number"
+					className="grid__item--range-input"
 					id="purchasingHousePrice"  
-					min="50000" 
-					max="750000" 
-					step="1000" 
+					min="0" 
+					max="999999999" 
 					value={props.purchasingHousePrice} 
 					onChange={(event) => 
 						props.setPurchasingHousePrice(event.target.value)
@@ -28,12 +28,12 @@ export const CalculatorControls = props => {
 			<div className="grid__item">
 				<span className="grid__item--header">{parseInt(props.depositAmount).toLocaleString('en-JM', localeOptions)}</span>
 				<input 
-					type="range"
-					className="grid__item--range-slider"
+					type="number"
+					className="grid__item--range-input"
+					name = "depositAmount"
 					id="depositAmount" 
 					min="1000" 
 					max="150000" 
-					step="1000" 
 					value={props.depositAmount}
          			onChange={(event) =>
 						props.setDepositAmount(event.target.value)
@@ -44,11 +44,10 @@ export const CalculatorControls = props => {
 				<span className="grid__item--header">{props.mortgageTerm} Years</span>
 				<input 
 					type="range"
-					className="grid__item--range-slider"
+					className="grid__item--range-input"
 					id="mortgageTerm"  
 					min="5" 
-					max="35" 
-					step="1" 
+					max="40" 
 					value={props.mortgageTerm} 
 					onChange={(event) => 
 						props.setMortgageTerm(event.target.value)
@@ -59,10 +58,10 @@ export const CalculatorControls = props => {
 				<span className="grid__item--header">{props.interestRate}%</span>
 				<input 
 					type="range"
-					className="grid__item--range-slider"
+					className="grid__item--range-input"
 					id="interestRate"  
 					min="0.1" 
-					max="8" 
+					max="20" 
 					step="0.1" 
 					value={props.interestRate} 
 					onChange={(event) => 

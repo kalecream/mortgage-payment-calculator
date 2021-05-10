@@ -16,7 +16,7 @@ h1 {
   font-size: 1.2em;
   margin-bottom: 10px;
 }
-.grid__item--range-slider {
+.grid__item--range-input {
   margin-bottom: 10px;
 }
 .grid__item--label {
