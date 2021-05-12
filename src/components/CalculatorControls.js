@@ -43,7 +43,7 @@ export const CalculatorControls = props => {
 			<div className="grid__item">
 				<span className="grid__item--header">{props.mortgageTerm} Years</span>
 				<input 
-					type="range"
+					type="number"
 					className="grid__item--range-input"
 					id="mortgageTerm"  
 					min="5" 
@@ -57,7 +57,7 @@ export const CalculatorControls = props => {
 			<div className="grid__item">
 				<span className="grid__item--header">{props.interestRate}%</span>
 				<input 
-					type="range"
+					type="number"
 					className="grid__item--range-input"
 					id="interestRate"  
 					min="0.1" 

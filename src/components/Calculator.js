@@ -6,6 +6,7 @@ import {PaymentTable} from './PaymentTable';
 import { handleMortgageDataChange } from './utils';
 
 
+
 export const Calculator = () => {
 	
 	const [purchasingHousePrice, setPurchasingHousePrice] = useState(15000000);
@@ -20,6 +21,15 @@ export const Calculator = () => {
 	const totalInterestPaid = totalRepaid - amountToBorrow;
 
 	const yearlyPayments = handleMortgageDataChange(amountToBorrow, mortgageTerm, interestRate, monthlyPayment);
+
+    function openPage(pageName, elmnt=1) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          document.getElementById(pageName).style.display = "block";
+    }
 
 	return(
 		<>
@@ -40,14 +50,22 @@ export const Calculator = () => {
 				setInterestRate={setInterestRate}
 			/>
 
+        <div className="center">
+        <button className="tablink" onClick={ () => {openPage('Graph')}}>Amortization Graph</button>
+        <button className="tablink" onClick={() => {openPage('Table2')}} id="defaultOpen">Amortization Table</button>
+        <div id="Graph" className="tabcontent activeTab">
 			<PaymentGraph
 				mortgageTerm={mortgageTerm}
 				yearlyPayments={yearlyPayments}
 			/>
+        </div>
+        <div id="Table2" className="tabcontent">
 			<PaymentTable
 				amountToBorrow={amountToBorrow}
 				yearlyPayments={yearlyPayments}
 			/>
+        </div>
+        </div>
 		</>
 	);
 

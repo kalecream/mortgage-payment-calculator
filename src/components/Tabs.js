@@ -6,18 +6,16 @@ import './App.css';
 function Tabs() {
 
     <div className="container">
-        <div className="bloc-tabs">
-            <div className="tabs active-tabs">Amortization Chart</div>
-            <div className="tabs">Interest Repayment Chart</div>
-            <div className="tabs">Amortization Table</div>
+        <button class="tablink" onclick="openPage('Graph', this)">Amortization Graph</button>
+        <button class="tablink" onclick="openPage('Table', this)" id="defaultOpen">Amortization Table</button>
+        <div id="Graph" class="tabcontent">
+          <h3>Graph</h3>
+          <PaymentGraph/>
         </div>
 
-        <div className="content-tabs">
-            <div className="content active-content">
-
-            </div>
-            <div className="content-tab"></div>
-            <div className="content-tab"></div>
+        <div id="Table" class="tabcontent">
+          <h3>Table</h3>
+          <PaymentTable/>
         </div>
     </div>
 }
