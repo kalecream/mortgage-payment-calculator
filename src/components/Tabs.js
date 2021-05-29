@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+import Tab from './Tab';
+import { Calculator } from './Calculator';
 import {PaymentGraph} from './PaymentGraph';
 import {PaymentTable} from './PaymentTable';
 import './App.css';
 
-function Tabs() {
 
     <div className="container">
         <button class="tablink" onclick="openPage('Graph', this)">Amortization Graph</button>

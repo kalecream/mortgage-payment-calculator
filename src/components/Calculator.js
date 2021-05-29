@@ -4,6 +4,7 @@ import {CalculatorControls} from './CalculatorControls';
 import {PaymentGraph} from './PaymentGraph';
 import {PaymentTable} from './PaymentTable';
 import { handleMortgageDataChange } from './utils';
+import { Tabs } from './Tabs';
 
 
 
