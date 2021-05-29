@@ -20,4 +20,3 @@ import './App.css';
           <PaymentTable/>
         </div>
     </div>
-}
